@@ -1,0 +1,3 @@
+# enable API GCP
+
+# export GOOGLE_APPLICATION_CREDENTIALS="KEY_PATH json"
