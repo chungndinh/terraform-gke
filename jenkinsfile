@@ -9,12 +9,11 @@ pipeline {
 
     stage('TF Plan') {
       steps {
-        container('terraform') {
 	  sh 'echo GOOGLE_APPLICATION_CREDENTIALS'
           sh 'll'
           sh 'terraform init'
           sh 'terraform plan -out myplan'
-        }
+        
       }      
     }
     stage('Approval') {
