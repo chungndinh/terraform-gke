@@ -5,7 +5,7 @@ pipeline {
   terraform 'terraform'
   }
   environment {
-#    GOOGLE_APPLICATION_CREDENTIALS = credentials('key-terraform')
+
   }
   stages {
     stage('TF Plan') {
