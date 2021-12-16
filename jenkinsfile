@@ -9,7 +9,7 @@ pipeline {
     stage('TF Plan') {
       steps {
 	  sh 'echo GOOGLE_APPLICATION_CREDENTIALS'
-          sh 'll'
+          sh 'ls'
           sh 'terraform init'
           sh 'terraform plan -out myplan'
         
