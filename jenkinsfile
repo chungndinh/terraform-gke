@@ -2,21 +2,21 @@ pipeline {
 
   agent any
 
-
   environment {
     GOOGLE_APPLICATION_CREDENTIALS = credentials('key-terraform')
   }
 
   stages {
+
+
     stage('TF Plan') {
-      steps {
-          sh 'echo GOOGLE_APPLICATION_CREDENTIALS'
+
+	        sh 'echo GOOGLE_APPLICATION_CREDENTIALS'
           sh 'll'
           sh 'terraform init'
           sh 'terraform plan -out myplan'
         }
-      }      
-    }
+
 
     stage('Approval') {
       steps {
@@ -35,4 +35,5 @@ pipeline {
     }
 
   } 
+
 }
