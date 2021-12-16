@@ -6,13 +6,17 @@ pipeline {
     GOOGLE_APPLICATION_CREDENTIALS = credentials('key-terraform')
   }
 
-  stages {
+
     stage('TF Plan') {
+      steps {
+        container('terraform') {
 	  sh 'echo GOOGLE_APPLICATION_CREDENTIALS'
           sh 'll'
           sh 'terraform init'
           sh 'terraform plan -out myplan'
         }
+      }      
+    }
     stage('Approval') {
       steps {
         script {
