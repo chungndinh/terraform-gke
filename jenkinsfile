@@ -1,7 +1,9 @@
 pipeline {
 
   agent any
-
+  tools {
+  terraform 'terraform'
+  }
   environment {
     GOOGLE_APPLICATION_CREDENTIALS = credentials('key-terraform')
   }
