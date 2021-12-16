@@ -4,9 +4,11 @@ pipeline {
   tools {
   terraform 'terraform'
   }
-
+  environment {
+    GOOGLE_APPLICATION_CREDENTIALS = credentials('key-terraform')
+  }  
   stages {
-    stage('TF Plan') {
+    stage('Init') {
       steps {
 	  sh 'echo $GOOGLE_APPLICATION_CREDENTIALS'
           sh 'ls'
