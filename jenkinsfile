@@ -4,9 +4,7 @@ pipeline {
   tools {
   terraform 'terraform'
   }
-  environment {
 
-  }
   stages {
     stage('TF Plan') {
       steps {
